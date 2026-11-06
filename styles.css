@@ -73,6 +73,7 @@ h3 { font-size: 1.28rem; }
 .process, .questions, .proof { padding-block: clamp(50px, 8vw, 106px); }
 .proof h2 { margin-bottom: 16px; max-width: 14ch; }
 .proof-lede { max-width: 62ch; color: var(--muted); margin-bottom: 28px; }
+.proof-lede a { font-weight: 750; }
 .proof ul { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px 28px; margin: 0; padding: 0; }
 .proof li { border-top: 1px solid var(--line); padding-top: 15px; }
 .proof h3 { margin-bottom: 8px; font-size: 1.15rem; }
