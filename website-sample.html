@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="An independent bike shop website concept by LLHiggins.">
+  <title>Switchback Cycle Service | LLHiggins design example</title>
+  <style>
+    :root { color-scheme: light; --paper: #f8f3e8; --ink: #102324; --orange: #ff7a41; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.5 system-ui, sans-serif; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid #0773d2; outline-offset: 4px; }
+    .wrap { width: min(100% - 72px, 1240px); margin-inline: auto; }
+    .concept { color: #f8f3e8; background: #102324; font-size: .75rem; }
+    .concept .wrap, header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .concept .wrap { min-height: 36px; }
+    header .wrap { min-height: 73px; }
+    .brand { display: inline-flex; gap: 9px; align-items: center; font-weight: 950; font-style: italic; font-size: clamp(1.1rem, 3vw, 1.65rem); letter-spacing: -.07em; text-decoration: none; }
+    .brand svg { width: 30px; height: 28px; }
+    nav { display: flex; gap: 26px; font-size: .875rem; font-weight: 700; }
+    nav a { text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .hero { position: relative; isolation: isolate; background: #102324; color: #fff8ed; overflow: hidden; }
+    .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 65% 56%; z-index: -2; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #07191aec 0%, #07191ac4 29%, #07191a44 56%, transparent 75%); z-index: -1; }
+    .hero .wrap { display: grid; min-height: clamp(470px, 49vw, 650px); align-content: center; padding-block: 66px; }
+    .kicker { margin: 0 0 17px; font: 800 .8rem/1.3 ui-monospace, monospace; letter-spacing: .13em; text-transform: uppercase; }
+    .hero .kicker { color: #ffb48f; }
+    h1, h2, h3, p { margin-block-start: 0; }
+    h1 { font-size: clamp(4rem, 8vw, 8.4rem); font-weight: 880; line-height: .91; letter-spacing: -.039em; margin-block-end: 22px; }
+    .hero-copy { color: #fff8ed; max-width: 31ch; font-size: clamp(1rem, 1.7vw, 1.25rem); margin-bottom: 25px; }
+    .button { width: fit-content; background: var(--orange); color: var(--ink); font-weight: 850; padding: .85rem 1.2rem; text-decoration: none; }
+    .button:hover { background: #ff9e72; }
+    .service { padding-block: clamp(50px, 8vw, 100px); display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(20px, 6vw, 90px); }
+    h2 { font-size: clamp(2.6rem, 6vw, 5.6rem); font-weight: 880; letter-spacing: -.039em; line-height: .94; margin-bottom: 14px; }
+    .service ol { list-style: none; margin: 0; padding: 0; }
+    .service li { border-top: 1px solid #aab4a8; padding: 20px 0; display: grid; grid-template-columns: 3rem 1fr; gap: 8px; }
+    .service li:last-child { border-bottom: 1px solid #aab4a8; }
+    .service li span { color: #705441; font: 800 .8rem/1.5 ui-monospace, monospace; }
+    h3 { font-size: 1.3rem; line-height: 1.15; margin-bottom: 5px; }
+    li p, .visit p { margin: 0; max-width: 52ch; }
+    .visit { background: #c6d3bd; padding-block: clamp(48px, 7vw, 95px); }
+    .visit a { display: inline-block; margin-top: 18px; font-weight: 800; }
+    footer { padding-block: 20px; font-size: .8rem; }
+    @media (max-width: 640px) {
+      .wrap { width: calc(100% - 36px); }
+      header .wrap { min-height: 60px; }
+      nav { gap: 13px; font-size: .8rem; }
+      .hero .wrap { min-height: 590px; align-content: end; padding-block: 44px; }
+      .hero-photo { object-position: 69% center; }
+      .hero::before { background: linear-gradient(0deg, #081b1cf5 0%, #081b1cc4 28%, #081b1c00 82%); }
+      .service { grid-template-columns: 1fr; }
+      h1 { font-size: clamp(3.5rem, 16vw, 5.5rem); }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <div class="concept"><div class="wrap"><span>Fictional design example</span><a href="index.html#example">Back to LLHiggins ↗</a></div></div>
+  <header><div class="wrap">
+    <a class="brand" href="#top" aria-label="Switchback home">
+      <svg viewBox="0 0 30 28" fill="none" aria-hidden="true"><path d="M2 23 12 6h7l-5 9h10l-5 8H2Zm15-10 5-8h7l-5 8h-7Z" fill="#102324"/></svg>
+      SWITCHBACK
+    </a>
+    <nav aria-label="Main navigation"><a href="#service">Service</a><a href="#visit">Visit</a></nav>
+  </div></header>
+  <main id="top">
+    <section class="hero" aria-labelledby="headline">
+      <img class="hero-photo" src="switchback-workshop.webp" alt="" fetchpriority="high">
+      <div class="wrap">
+        <p class="kicker">Independent bicycle workshop</p>
+        <h1 id="headline">Ride<br>smooth.</h1>
+        <p class="hero-copy">Tune-ups, repairs and wheel work for the bike you actually ride.</p>
+        <a class="button" href="#service">Explore repairs <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+    <section class="service wrap" id="service">
+      <div><p class="kicker">The workshop</p><h2>Find your fix.</h2></div>
+      <ol>
+        <li><span>01</span><div><h3>Tune-ups</h3><p>Get your shifting, braking and bearings running smoothly again.</p></div></li>
+        <li><span>02</span><div><h3>Repairs</h3><p>Find the cause of a rub, rattle or creak before replacing parts.</p></div></li>
+        <li><span>03</span><div><h3>Wheel work</h3><p>Wheel truing, puncture repair and tubeless setup.</p></div></li>
+      </ol>
+    </section>
+    <section class="visit" id="visit"><div class="wrap">
+      <p class="kicker">An example of the next step</p>
+      <h2>Bring your bike.</h2>
+      <p>A shop can put its hours, address and preferred way to schedule service right here. Switchback is a fictional shop.</p>
+      <a href="index.html#contact">Ask LLHiggins about a website like this ↗</a>
+    </div></section>
+  </main>
+  <footer class="wrap">Switchback Cycle Service is a fictional design example by LLHiggins.</footer>
+</body>
+</html>

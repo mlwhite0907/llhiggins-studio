@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://llhiggins-studio.pages.dev/sitemap.xml
